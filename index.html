@@ -1,0 +1,36 @@
+
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    <h1 id="myheader" class="myheaderclass">This is a Button</h1>
+    
+    <input id="todo" type="text"></input>
+
+    <button id="todo-button">Add todo</button>
+
+    <ul id="todo-list">
+
+
+    </ul>
+
+    <script>
+        const input = document.querySelector('#todo');
+
+        const todoButton = document.querySelector('#todo-button');
+
+        const todoList = document.querySelector('#todo-list');
+
+        todoButton.addEventListener('click', () =>{
+            let newTodo = input.value;
+            let todo = document.createElement('li');
+            todo.innerHTML = newTodo;
+            todoList.append(todo);
+        });
+
+
+    </script>
+</body>
+</html>
